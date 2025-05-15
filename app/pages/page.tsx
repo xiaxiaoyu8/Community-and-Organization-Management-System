@@ -89,7 +89,8 @@ export default function DashboardPage() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
-      <h1 className="text-4xl font-bold mb-6">贪吃蛇游戏</h1>
+      <h1 className="text-4xl font-bold mb-6">🎮贪吃蛇游戏🎮</h1>
+      <h1 className="text-xl text-orange-600 mb-6">请使用PC游玩</h1>
 
       {!started && !gameOver && (
         <button

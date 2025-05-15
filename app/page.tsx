@@ -69,7 +69,7 @@ export default function LoginPage() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-900 p-4">
       <h1 className="text-3xl font-bold mb-4 text-gray-800 dark:text-white">
-        社团管理系统 - 登录
+        系统 - 登录
       </h1>
 
       <div className="mb-4 w-full max-w-md p-6 bg-white rounded-lg shadow-md">
@@ -121,6 +121,7 @@ export default function LoginPage() {
         <p>操作说明:</p>
         <ul className="list-disc list-inside">
           <li>输入用户名和密码进行登录。</li>
+          <li>注册账户请QQ联系管理员：2739381256。</li>
           <li>按Enter键也可以提交登录表单。</li>
         </ul>
       </div>
