@@ -69,7 +69,7 @@ export default function LoginPage() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-900 p-4">
       <h1 className="text-3xl font-bold mb-4 text-gray-800 dark:text-white">
-        党支部评分系统 - 登录
+        社团管理系统 - 登录
       </h1>
 
       <div className="mb-4 w-full max-w-md p-6 bg-white rounded-lg shadow-md">
