@@ -14,6 +14,7 @@ const userDatabase = [
   { username: "wangluyi", password: "123456" },
   { username: "jinning", password: "123456" },
   { username: "liumengran", password: "123456" },
+  { username: "lb", password: "lb" },
   { username: "1", password: "1" },
   { username: "xiaxiaoyu", password: "123456" }
 ];
@@ -68,7 +69,7 @@ export default function LoginPage() {
     // const userInfo = await fetchUserInfo();
     // setUserInfo(userInfo);
     // 这里可以使用 useRef 来保存登录状态
-    // loginStatusRef.current = loggedIn;
+    loginStatusRef.current = loggedIn;
     // console.log("登录状态:", loginStatusRef.current);
   }, [loggedIn]);
 
