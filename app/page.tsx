@@ -7,15 +7,12 @@ import { useRouter } from 'next/navigation';
 // 模拟的用户信息（可以通过接口调用替代）
 const userDatabase = [
   { username: "admin", password: "password123" },
-  { username: "user1", password: "12345" },
-  { username: "user2", password: "password678" },
   { username: "wangziming", password: "123456" },
   { username: "liujunmei", password: "123456" },
   { username: "wangluyi", password: "123456" },
   { username: "jinning", password: "123456" },
   { username: "liumengran", password: "123456" },
   { username: "lb", password: "lb" },
-  { username: "1", password: "1" },
   { username: "xiaxiaoyu", password: "123456" }
 ];
 
@@ -60,18 +57,16 @@ export default function LoginPage() {
 
   // 如果用户已登录，跳转到主页面（这里模拟跳转）
   const router = useRouter();
-  useEffect(() => {
+
+useEffect(() => {
   if (loggedIn) {
-      router.push("/pages");
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('loggedInUsername', username); // 保存用户名
     }
-    // 这里可以添加其他逻辑，比如获取用户信息等
-    // 例如：获取用户信息
-    // const userInfo = await fetchUserInfo();
-    // setUserInfo(userInfo);
-    // 这里可以使用 useRef 来保存登录状态
-    loginStatusRef.current = loggedIn;
-    // console.log("登录状态:", loginStatusRef.current);
-  }, [loggedIn]);
+    router.push("/pages");
+  }
+  loginStatusRef.current = loggedIn;
+}, [loggedIn, router, username]);
 
 
   return (

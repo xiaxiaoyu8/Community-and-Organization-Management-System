@@ -4,6 +4,7 @@
 import { useState, useEffect, useMemo } from "react"; // React Hooks
 import { useRouter } from 'next/navigation'; // Next.js 路由
 
+
 // TypeScript 类型定义区域 (与后端 /api/people 返回的 Person, ScoreChange 一致)
 // ----------------------
 export interface ScoreChange { // 添加 export 以便后端API文件可以（可选地）引用此定义
@@ -157,7 +158,12 @@ export default function MainPage() {
 
     const actualAdjustment = scoreAdjustmentType === 'deduct' ? -Math.abs(amount) : Math.abs(amount);
     const updatedIds = Array.from(selectedPeopleIds);
-    const updatedBy = 'admin_js_client'; // 实际应从认证状态获取
+    let actualUsername: string | null = null;
+
+    if (typeof window !== 'undefined') {
+      actualUsername = localStorage.getItem('loggedInUsername');
+    }
+    const updatedBy = actualUsername || 'defaultAdmin';
 
     const requestBody = { ids: updatedIds, reason: scoreUpdateReason, adjustmentAmount: actualAdjustment, adjustmentType: scoreAdjustmentType, updatedBy };
     console.log("前端: 发送分数调整请求到 /api/scores/adjust", requestBody);
@@ -199,7 +205,7 @@ export default function MainPage() {
 
   // 加载状态显示
   if (isLoading) {
-    return <div className="flex justify-center items-center min-h-screen text-gray-700 dark:text-gray-300">数据加载中，请稍候...预计等待总时间40s</div>;
+    return <div className="flex justify-center items-center min-h-screen text-gray-700 dark:text-gray-300">数据正在源源不断涌来，请稍候...</div>;
   }
 
   // JSX 渲染主体 (保持不变，与上次提供的一致)
@@ -258,7 +264,7 @@ export default function MainPage() {
                   <th scope="col" className="p-3 w-12 text-center">选择</th>
                   <th scope="col" className="p-3">学号 (ID)</th>
                   <th scope="col" className="p-3">姓名</th>
-                  <th scope="col" className="p-3">申请/记录日期</th>
+                  <th scope="col" className="p-3">记录日期</th>
                   <th scope="col" className="p-3">当前分数</th>
                 </tr>
               </thead>
