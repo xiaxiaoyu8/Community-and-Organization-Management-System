@@ -226,9 +226,9 @@ export default function BlogHomePage() {
                 <ul className="space-y-2 text-sm">
                   {[ // 示例热搜项
                     "1. 现场直击神舟十八返回舱着陆",
-                    "2. 古茗回应设计抄袭 chaîne",
+                    "2. 古茗回应设计抄袭",
                     "3. 可爱多",
-                    "4. 神十八乘组将在1天内抵京",
+                    "4. 神舟飞船乘组将在1天内抵京",
                     "5. 歌手 你会这么玩支持何老师吗",
                   ].map((item, index) => (
                     <li key={index} className="flex items-center">
