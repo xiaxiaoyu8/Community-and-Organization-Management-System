@@ -220,7 +220,7 @@ export default function BlogHomePage() {
             <aside className="w-full lg:w-1/4 space-y-6 order-3 lg:order-3">
               <div className="bg-white p-4 rounded-lg shadow">
                 <div className="flex justify-between items-center mb-3 border-b pb-2">
-                    <h3 className="font-semibold text-gray-700">微博实时热搜榜</h3>
+                    <h3 className="font-semibold text-gray-700">微博热搜榜</h3>
                     <button className="text-xs text-gray-400 hover:text-gray-600">🔄</button> {/* 刷新图标 */}
                 </div>
                 <ul className="space-y-2 text-sm">
