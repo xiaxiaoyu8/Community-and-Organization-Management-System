@@ -196,6 +196,8 @@ export default function BlogHomePage() {
                         <>
                             <p>今日访问: {visitorStats.dailyVisits.toLocaleString()} 人/次</p>
                             <p>总访问量: {visitorStats.totalVisits.toLocaleString()} 人/次</p>
+                            <br />
+                            <p className="font-semibold text-sm mb-2 border-b pb-1">联系电话: 15872469989（微信同号）</p>
                         </>
                     ) : (
                         <p>加载中...</p> // 加载状态提示
