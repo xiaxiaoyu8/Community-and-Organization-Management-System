@@ -136,8 +136,6 @@ export default function BlogHomePage() {
           className="h-[400px] bg-cover bg-center flex items-center justify-center text-white relative"
           style={{ backgroundImage: `url(${GugongBackgroundImage.src})` }} // 注意：如果图片不显示，请检查导入路径或考虑将图片移至 public 目录
         >
-          {/* 背景图片的遮罩层，确保文字清晰 */}
-          <div className="absolute inset-0 bg-black bg-opacity-40"></div>
           <div className="relative z-10 text-center">
             <h1 className="text-6xl font-bold leading-tight" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.7)' }}>
               {dateInfo.split(" ")[0]} {/* 显示星期 */}
