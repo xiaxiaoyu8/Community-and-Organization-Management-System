@@ -20,16 +20,10 @@ interface AdjustScoreRequestBody {
   updatedBy: string;             // 执行操作的管理员用户名
 }
 
-// --- 数据库连接池初始化 ---
-// 确保你的 .env 文件中有 DATABASE_URL 环境变量，例如:
-// DATABASE_URL="postgresql://youruser:yourpassword@yourhost:yourport/yourdatabase"
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
-  // 根据需要配置 SSL (例如在生产环境中)
-  // ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false,
 });
 
-// --- POST 请求处理函数 ---
 export async function POST(request: NextRequest) {
   console.log('API /api/scores/adjust 接收到 POST 请求'); // 后端日志: 标记收到请求
 
