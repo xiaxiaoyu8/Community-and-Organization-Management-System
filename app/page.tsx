@@ -255,7 +255,7 @@ export default function BlogHomePage() {
                   <p className="text-xs text-gray-600">展示了本网页的主要代码，以及其他的个人项目 Star。</p>
                   </div>
                   <div className="bg-white p-4 rounded-lg shadow">
-                    <a href="https://gitee.com/embed-xia" target="_blank" rel="noopener noreferrer" className="block rounded-md hover:text-blue-600"> {/* 修正了 Gitee 链接 */}
+                    <a href="https://gitee.com/xiaxiaoyu8" target="_blank" rel="noopener noreferrer" className="block rounded-md hover:text-blue-600"> {/* 修正了 Gitee 链接 */}
                       <h3 className="font-semibold text-orange-500 mb-1">❤ gitee主页</h3>
                     </a>
                     <p className="text-xs text-gray-600">展示了我的其他个人项目 Star。</p>
