@@ -225,11 +225,11 @@ export default function BlogHomePage() {
                 </div>
                 <ul className="space-y-2 text-sm">
                   {[ // 示例热搜项
-                    "1. 现场直击神舟十八返回舱着陆",
-                    "2. 古茗回应设计抄袭",
-                    "3. 可爱多",
-                    "4. 神舟飞船乘组将在1天内抵京",
-                    "5. 歌手 你会这么玩支持何老师吗",
+                    "1. 王健林再卖万达广场",
+                    "2. 娱乐主播收入排行榜",
+                    "3. 蛋 宁碎不翻",
+                    "4. 新说唱",
+                    "5. 手串 辐射",
                   ].map((item, index) => (
                     <li key={index} className="flex items-center">
                       <span className={`mr-2 w-5 text-center font-bold ${index < 3 ? 'text-red-500' : 'text-orange-400'}`}>{index + 1}</span>
@@ -245,20 +245,44 @@ export default function BlogHomePage() {
                   <div className="bg-white p-4 rounded-lg shadow">
                     <a href="https://space.bilibili.com/473139017?spm_id_from=333.788.0.0/" target="_blank" rel="noopener noreferrer" className="block rounded-md hover:text-blue-600">
                       <h3 className="font-semibold text-green-500 mb-1">📺 B站主页</h3>
+                      <p className="text-xs text-gray-600">嵌入式学习记录，感谢三连支持。</p>
                     </a>
-                    <p className="text-xs text-gray-600">嵌入式学习记录，感谢三连支持。</p>
                   </div>
                   <div className="bg-white p-4 rounded-lg shadow">
                     <a href="https://github.com/xiaxiaoyu8/" target="_blank" rel="noopener noreferrer" className="block rounded-md hover:text-blue-600">
                       <h3 className="font-semibold text-red-500 mb-1">🐈︎ github主页</h3>
+                      <p className="text-xs text-gray-600">展示了本网页的主要代码，以及其他的个人项目 Star。</p>
                     </a>
-                  <p className="text-xs text-gray-600">展示了本网页的主要代码，以及其他的个人项目 Star。</p>
                   </div>
                   <div className="bg-white p-4 rounded-lg shadow">
                     <a href="https://gitee.com/xiaxiaoyu8" target="_blank" rel="noopener noreferrer" className="block rounded-md hover:text-blue-600"> {/* 修正了 Gitee 链接 */}
                       <h3 className="font-semibold text-orange-500 mb-1">❤ gitee主页</h3>
+                      <p className="text-xs text-gray-600">展示了我的其他个人项目 Star。</p>
                     </a>
-                    <p className="text-xs text-gray-600">展示了我的其他个人项目 Star。</p>
+                  </div>
+                  <div className="bg-white p-4 rounded-lg shadow">
+                    <a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer" className="block rounded-md hover:text-blue-600"> {/* 修正了 Gitee 链接 */}
+                      <h3 className="font-semibold text-orange-500 mb-1">🔗 ChatGPT</h3>
+                      <p className="text-xs text-gray-600">友情链接</p>
+                    </a>
+                  </div>
+                  <div className="bg-white p-4 rounded-lg shadow">
+                    <a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer" className="block rounded-md hover:text-blue-600"> {/* 修正了 Gitee 链接 */}
+                      <h3 className="font-semibold text-orange-500 mb-1">🔗 Gemini</h3>
+                      <p className="text-xs text-gray-600">友情链接</p>
+                    </a>
+                  </div>
+                  <div className="bg-white p-4 rounded-lg shadow">
+                    <a href="https://grok.com/" target="_blank" rel="noopener noreferrer" className="block rounded-md hover:text-blue-600"> {/* 修正了 Gitee 链接 */}
+                      <h3 className="font-semibold text-orange-500 mb-1">🔗 Grok</h3>
+                      <p className="text-xs text-gray-600">友情链接</p>
+                    </a>
+                  </div>
+                  <div className="bg-white p-4 rounded-lg shadow">
+                    <a href="https://claude.ai/new" target="_blank" rel="noopener noreferrer" className="block rounded-md hover:text-blue-600"> {/* 修正了 Gitee 链接 */}
+                      <h3 className="font-semibold text-orange-500 mb-1">🔗 Claude</h3>
+                      <p className="text-xs text-gray-600">友情链接</p>
+                    </a>
                   </div>
             </aside>
           </div>
@@ -266,7 +290,7 @@ export default function BlogHomePage() {
 
         {/* 页脚 */}
         <footer className="text-center p-4 text-xs text-gray-500 border-t">
-          © {new Date().getFullYear()} <span className="text-[13px] text-[#0055ff]">夏小雨</span>  的 个人博客  版权所有
+          © {new Date().getFullYear()} <span className="text-[13px] text-[#0055ff]">夏小雨</span>  的个人博客  版权所有
           <p className="text-[10px]">测试QQ联系管理员: 2739381256 | 禁止非法用途</p>
         </footer>
       </div>
