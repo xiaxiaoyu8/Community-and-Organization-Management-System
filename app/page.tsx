@@ -9,8 +9,7 @@ import ArticleUpload from "@/components/ArticleUpload";
 import ArticleList from "@/components/ArticleList";
 
 // 导入您的本地图片
-import GugongBackgroundImage from './source/images/gugong.jpg'; // 确保此路径相对于当前文件 app/page.tsx 是正确的
-
+import GugongBackgroundImage from './source/images/乐林泉——中外园林文化展.jpg'; // 确保此路径相对于当前文件 app/page.tsx 是正确的
 // 日期和农历助手函数 (简化版)
 const getCurrentDateInfo = () => {
   const now = new Date(); // 为演示目的，可固定到当前日期
@@ -22,7 +21,7 @@ const getCurrentDateInfo = () => {
 
   // 农历日期占位符 - 真实应用中请使用库以确保准确性
   // 注意: "乙巳年 蛇" 是一个基于特定年份的示例，如果需要动态显示，需要更复杂的农历转换逻辑
-  const lunarYearAnimal = "农历四月廿七"; // 示例, 实际农历日期会变化，这里是固定值
+  const lunarYearAnimal = "农历四月廿七"; // 示例, 实际农历日期会变化，这里是固定值,无调用
 
   return `${dayOfWeek} ${year}年${month}月${day}日 ${lunarYearAnimal}`;
 };
