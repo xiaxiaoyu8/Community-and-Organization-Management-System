@@ -9,7 +9,7 @@ import ArticleUpload from "@/components/ArticleUpload";
 import ArticleList from "@/components/ArticleList";
 
 // 导入您的本地图片
-import GugongBackgroundImage from './source/images/乐林泉——中外园林文化展.jpg'; // 确保此路径相对于当前文件 app/page.tsx 是正确的
+import GugongBackgroundImage from './source/images/gugong月灵泉.jpg'; // 确保此路径相对于当前文件 app/page.tsx 是正确的
 // 日期和农历助手函数 (简化版)
 const getCurrentDateInfo = () => {
   const now = new Date(); // 为演示目的，可固定到当前日期
