@@ -8,6 +8,12 @@ import LoginWidget from "@/components/LoginWidget";
 import ArticleUpload from "@/components/ArticleUpload";
 import ArticleList from "@/components/ArticleList";
 
+type HotItem = {
+  title: string
+  hot: string
+  url: string
+}
+
 // 导入您的本地图片
 import GugongBackgroundImage from './source/images/gugong_yuelingquan.jpg'; // 确保此路径相对于当前文件 app/page.tsx 是正确的
 // 日期和农历助手函数 (简化版)
@@ -46,6 +52,11 @@ export default function BlogHomePage() {
   const [showUploadForm, setShowUploadForm] = useState<boolean>(false);
   const [refreshArticleTrigger, setRefreshArticleTrigger] = useState<number>(0);
   const [visitorStats, setVisitorStats] = useState<VisitorStats | null>(null); // 用于存储访客统计的状态
+  //微博热搜列表
+  const [hotList, setHotList] = useState<HotItem[]>([])
+  const [error, setError] = useState<string | null>(null)
+
+  
 
   useEffect(() => {
     setDateInfo(getCurrentDateInfo());
@@ -53,6 +64,7 @@ export default function BlogHomePage() {
     if (storedUser) {
       setLoggedInUser(JSON.parse(storedUser));
     }
+    
 
     // 获取初始统计数据并增加访问次数
     const fetchAndIncrementStats = async () => {
@@ -243,19 +255,19 @@ export default function BlogHomePage() {
                   </div>
                   <div className="bg-white p-4 rounded-lg shadow">
                     <a href="https://space.bilibili.com/473139017?spm_id_from=333.788.0.0/" target="_blank" rel="noopener noreferrer" className="block rounded-md hover:text-blue-600">
-                      <h3 className="font-semibold text-green-500 mb-1">📺 B站主页</h3>
+                      <h3 className="font-semibold text-green-500 mb-1">📺 夏小雨_bilibili</h3>
                       <p className="text-xs text-gray-600">嵌入式学习记录，感谢三连支持。</p>
                     </a>
                   </div>
                   <div className="bg-white p-4 rounded-lg shadow">
                     <a href="https://github.com/xiaxiaoyu8/" target="_blank" rel="noopener noreferrer" className="block rounded-md hover:text-blue-600">
-                      <h3 className="font-semibold text-red-500 mb-1">🐈︎ github主页</h3>
+                      <h3 className="font-semibold text-red-500 mb-1">🐈︎ 夏小雨_GitHub</h3>
                       <p className="text-xs text-gray-600">展示了本网页的主要代码，以及其他的个人项目 Star。</p>
                     </a>
                   </div>
                   <div className="bg-white p-4 rounded-lg shadow">
                     <a href="https://gitee.com/xiaxiaoyu8" target="_blank" rel="noopener noreferrer" className="block rounded-md hover:text-blue-600"> {/* 修正了 Gitee 链接 */}
-                      <h3 className="font-semibold text-orange-500 mb-1">❤ gitee主页</h3>
+                      <h3 className="font-semibold text-orange-500 mb-1">❤ 夏小雨_Gitee</h3>
                       <p className="text-xs text-gray-600">展示了我的其他个人项目 Star。</p>
                     </a>
                   </div>
