@@ -15,7 +15,7 @@ type HotItem = {
 }
 
 // 导入您的本地图片
-import GugongBackgroundImage from './source/images/gugong_yuelingquan.jpg'; // 确保此路径相对于当前文件 app/page.tsx 是正确的
+import HomepageBackgroundImage from './source/images/gugong_zhanlan01.jpg'; // 确保此路径相对于当前文件 app/page.tsx 是正确的
 // 日期和农历助手函数 (简化版)
 const getCurrentDateInfo = () => {
   const now = new Date(); // 为演示目的，可固定到当前日期
@@ -145,7 +145,7 @@ export default function BlogHomePage() {
       <div className="min-h-screen bg-gray-100 flex flex-col">
         <header
           className="h-[400px] bg-cover bg-center flex items-center justify-center text-white relative"
-          style={{ backgroundImage: `url(${GugongBackgroundImage.src})` }} // 注意：如果图片不显示，请检查导入路径或考虑将图片移至 public 目录
+          style={{ backgroundImage: `url(${HomepageBackgroundImage.src})` }} // 注意：如果图片不显示，请检查导入路径或考虑将图片移至 public 目录
         >
           <div className="relative z-10 text-center">
             <h1 className="text-6xl font-bold leading-tight" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.7)' }}>
