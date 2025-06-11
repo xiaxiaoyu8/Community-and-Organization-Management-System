@@ -229,26 +229,6 @@ export default function BlogHomePage() {
 
             {/* 右侧边栏 (占位符) */}
             <aside className="w-full lg:w-1/4 space-y-6 order-3 lg:order-3">
-              <div className="bg-white p-4 rounded-lg shadow">
-                <div className="flex justify-between items-center mb-3 border-b pb-2">
-                    <h3 className="font-semibold text-gray-700">微博热搜榜</h3>
-                    <button className="text-xs text-gray-400 hover:text-gray-600">🔄</button> {/* 刷新图标 */}
-                </div>
-                <ul className="space-y-2 text-sm">
-                  {[ // 示例热搜项
-                    "1. 王健林再卖万达广场",
-                    "2. 娱乐主播收入排行榜",
-                    "3. 蛋 宁碎不翻",
-                    "4. 新说唱",
-                    "5. 手串 辐射",
-                  ].map((item, index) => (
-                    <li key={index} className="flex items-center">
-                      <span className={`mr-2 w-5 text-center font-bold ${index < 3 ? 'text-red-500' : 'text-orange-400'}`}>{index + 1}</span>
-                      <a href="#" className="text-gray-600 hover:text-blue-600 truncate" title={item.substring(item.indexOf(" ") + 1)}>{item.substring(item.indexOf(" ") + 1)}</a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
                 {/* 图片中的其他占位符块 */}
                   <div className="bg-white p-4 rounded-lg shadow">
                     <h3 className="font-semibold text-gray-700 mb-3 border-b pb-2">夏小雨的个人主页</h3>
